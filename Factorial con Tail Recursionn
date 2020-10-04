@@ -1,0 +1,16 @@
+#include<stdio.h>
+long int Multipo(int n);
+int main() {
+    int n;
+    printf("Introduzca un valor positivo ");
+    scanf("%d",&n);
+    printf("Factorial de%d = %ld", n, multiplo(n));
+    return 0;
+}
+
+long int multiplo(int n) {
+    if (n>=1)
+        return n*multiplo(n-1);
+    else
+        return 1;
+}

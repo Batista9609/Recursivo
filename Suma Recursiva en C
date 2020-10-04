@@ -1,0 +1,16 @@
+#include <stdio.h>
+int AgNumero(int n);
+int main() {
+    int num;
+    printf(" Numero positivo ");
+    scanf("%d", &num);
+    printf("Sum = %d", AgNumero(num));
+    return 0;
+}
+
+int AgNumero(int n) {
+    if (n != 0)
+        return n +  AgNumero(n - 1);
+    else
+        return n;
+}

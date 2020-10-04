@@ -1,0 +1,23 @@
+#include<stdio.h> 
+int sumOfArrElem (int * arr, int sizeOfArr, int sumOfArr ) 
+{ 
+   if ( sizeOfArr == 0 )  
+   {
+     return sumOfArr; 
+   }
+   else
+   {  
+     return sumOfArrElem(arr,sizeOfArr-1,sumOfArr+arr[sizeOfArr-1]); 
+   } 
+ } 
+int main ( int argc, char **argv )
+{
+     int acTestArr [] = { 1, 7, 28, 50, 18, 16 };
+     int sum = 0; 
+     int sizeOfArr;        
+     sizeOfArr = sizeof ( acTestArr ) / sizeof ( acTestArr[0] );      
+    
+     sum = sumOfArrElem ( acTestArr, sizeOfArr, sum );
+     printf ( "The sum of array elements is %d\n", sum ); 
+     return 0; 
+ }
